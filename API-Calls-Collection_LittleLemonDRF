@@ -1,0 +1,727 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "LittleLemonDRF",
+    "dateExported": "2023-01-12T00:23:28.746Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "a859703f-0e23-4cd3-9acf-3764e888dedb",
+            "colId": "3cd21f20-9a35-49dc-bf07-398dbe76a890",
+            "containerId": "",
+            "name": "Get Token",
+            "url": "http://127.0.0.1:8000/auth/token/login",
+            "method": "POST",
+            "sortNum": 5000,
+            "created": "2023-01-09T22:00:49.696Z",
+            "modified": "2023-01-11T23:50:46.719Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"Manager\",\n  \"password\": \"Test@123\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "e2777a5c-29e8-49ea-aba7-2c5c8841afe9",
+            "colId": "3cd21f20-9a35-49dc-bf07-398dbe76a890",
+            "containerId": "",
+            "name": "Check Current User",
+            "url": "http://127.0.0.1:8000/auth/users/me/",
+            "method": "GET",
+            "sortNum": 6250,
+            "created": "2022-12-29T20:21:09.535Z",
+            "modified": "2023-01-09T22:17:47.133Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "f4675270e915d247632a273ac2047df7461cd78e",
+                "bearerPrefix": "Token"
+            },
+            "tests": []
+        },
+        {
+            "_id": "b450b3fc-0435-4494-be79-3b1cfe8f6c54",
+            "colId": "3cd21f20-9a35-49dc-bf07-398dbe76a890",
+            "containerId": "",
+            "name": "Get Menu Items",
+            "url": "http://127.0.0.1:8000/api/menu-items",
+            "method": "GET",
+            "sortNum": 7500,
+            "created": "2023-01-09T22:02:24.443Z",
+            "modified": "2023-01-12T00:11:45.065Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "price",
+                    "value": "1",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "category",
+                    "value": "2",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "search",
+                    "value": "Patched",
+                    "isDisabled": true,
+                    "isPath": false
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "f4675270e915d247632a273ac2047df7461cd78e",
+                "bearerPrefix": "Token"
+            },
+            "tests": []
+        },
+        {
+            "_id": "2852d533-fb25-4fb4-8d76-ab2e9fae2ef7",
+            "colId": "3cd21f20-9a35-49dc-bf07-398dbe76a890",
+            "containerId": "",
+            "name": "Add Menu Item",
+            "url": "http://127.0.0.1:8000/api/menu-items",
+            "method": "POST",
+            "sortNum": 13750,
+            "created": "2023-01-09T22:11:27.696Z",
+            "modified": "2023-01-09T22:17:49.499Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"testItem\",\n  \"price\": 2,\n  \"category_id\": 1\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "f4675270e915d247632a273ac2047df7461cd78e",
+                "bearerPrefix": "Token"
+            },
+            "tests": []
+        },
+        {
+            "_id": "8d7253e9-a46d-4bde-8d47-ebd68c94659b",
+            "colId": "3cd21f20-9a35-49dc-bf07-398dbe76a890",
+            "containerId": "",
+            "name": "Patch Menu Item",
+            "url": "http://127.0.0.1:8000/api/menu-items/3",
+            "method": "PATCH",
+            "sortNum": 15312.5,
+            "created": "2023-01-09T22:15:42.739Z",
+            "modified": "2023-01-09T22:17:54.757Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"patchedMenuItem\",\n  \"price\": 4,\n  \"category_id\": 1\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "f4675270e915d247632a273ac2047df7461cd78e",
+                "bearerPrefix": "Token"
+            },
+            "tests": []
+        },
+        {
+            "_id": "d12814f8-6966-43b2-ac5b-453f6c09cc24",
+            "colId": "3cd21f20-9a35-49dc-bf07-398dbe76a890",
+            "containerId": "",
+            "name": "Get Menu Item",
+            "url": "http://127.0.0.1:8000/api/menu-items/5",
+            "method": "GET",
+            "sortNum": 16875,
+            "created": "2023-01-09T22:12:40.370Z",
+            "modified": "2023-01-09T22:17:51.561Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "f4675270e915d247632a273ac2047df7461cd78e",
+                "bearerPrefix": "Token"
+            },
+            "tests": []
+        },
+        {
+            "_id": "368a1ca6-f6a3-4a66-ad9e-3f66c2664fc9",
+            "colId": "3cd21f20-9a35-49dc-bf07-398dbe76a890",
+            "containerId": "",
+            "name": "Delete Menu Item",
+            "url": "http://127.0.0.1:8000/api/menu-items/5",
+            "method": "DELETE",
+            "sortNum": 18437.5,
+            "created": "2023-01-09T22:13:14.680Z",
+            "modified": "2023-01-09T22:17:57.818Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "f4675270e915d247632a273ac2047df7461cd78e",
+                "bearerPrefix": "Token"
+            },
+            "tests": []
+        },
+        {
+            "_id": "77a8ab41-bdfb-4310-831c-5db738b82f76",
+            "colId": "3cd21f20-9a35-49dc-bf07-398dbe76a890",
+            "containerId": "",
+            "name": "List Managers",
+            "url": "http://127.0.0.1:8000/api/groups/manager/users",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2022-12-29T20:24:50.068Z",
+            "modified": "2023-01-09T22:09:34.834Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "f4675270e915d247632a273ac2047df7461cd78e",
+                "bearerPrefix": "Token"
+            },
+            "tests": []
+        },
+        {
+            "_id": "acdb80d7-3f13-4047-a2f6-ef5a89874511",
+            "colId": "3cd21f20-9a35-49dc-bf07-398dbe76a890",
+            "containerId": "",
+            "name": "Add User to Management Group",
+            "url": "http://127.0.0.1:8000/api/groups/manager/users",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-01-09T22:04:28.333Z",
+            "modified": "2023-01-09T22:04:53.937Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"username\": \"toBeManager\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "f4675270e915d247632a273ac2047df7461cd78e",
+                "bearerPrefix": "Token"
+            },
+            "tests": []
+        },
+        {
+            "_id": "53e923b1-c70f-48bf-8bb4-348aa50a3e92",
+            "colId": "3cd21f20-9a35-49dc-bf07-398dbe76a890",
+            "containerId": "",
+            "name": "Remove User from Management Group",
+            "url": "http://127.0.0.1:8000/api/groups/manager/users/6",
+            "method": "DELETE",
+            "sortNum": 35000,
+            "created": "2023-01-09T22:05:02.622Z",
+            "modified": "2023-01-09T22:05:27.500Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"username\": \"toBeManager\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "f4675270e915d247632a273ac2047df7461cd78e",
+                "bearerPrefix": "Token"
+            },
+            "tests": []
+        },
+        {
+            "_id": "b1b78e32-0551-41b8-bb1e-02d3d2ed3530",
+            "colId": "3cd21f20-9a35-49dc-bf07-398dbe76a890",
+            "containerId": "",
+            "name": "List Delivery Crew",
+            "url": "http://127.0.0.1:8000/api/groups/delivery-crew/users",
+            "method": "GET",
+            "sortNum": 37500,
+            "created": "2023-01-09T22:06:01.985Z",
+            "modified": "2023-01-09T22:06:20.777Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"username\": \"testadmin\",\n    \"password\": \"Lemon@123\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "f4675270e915d247632a273ac2047df7461cd78e",
+                "bearerPrefix": "Token"
+            },
+            "tests": []
+        },
+        {
+            "_id": "af6eb1eb-afb0-4eb4-bbd1-c1fedae87ec0",
+            "colId": "3cd21f20-9a35-49dc-bf07-398dbe76a890",
+            "containerId": "",
+            "name": "Add User to Delivery Crew Group",
+            "url": "http://127.0.0.1:8000/api/groups/delivery-crew/users",
+            "method": "POST",
+            "sortNum": 38750,
+            "created": "2023-01-09T22:06:23.221Z",
+            "modified": "2023-01-09T22:07:02.290Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"username\": \"toBeDeliveryCrew\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "f4675270e915d247632a273ac2047df7461cd78e",
+                "bearerPrefix": "Token"
+            },
+            "tests": []
+        },
+        {
+            "_id": "f34b2fd5-0d16-47b1-9ea2-f0d745b19e67",
+            "colId": "3cd21f20-9a35-49dc-bf07-398dbe76a890",
+            "containerId": "",
+            "name": "Remove User from Delivery Crew Group",
+            "url": "http://127.0.0.1:8000/api/groups/delivery-crew/users/7",
+            "method": "DELETE",
+            "sortNum": 39375,
+            "created": "2023-01-09T22:06:26.527Z",
+            "modified": "2023-01-09T22:07:30.331Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"username\": \"toBeManager\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "f4675270e915d247632a273ac2047df7461cd78e",
+                "bearerPrefix": "Token"
+            },
+            "tests": []
+        },
+        {
+            "_id": "0cf4f90d-145d-4e8c-acb4-de797de0a314",
+            "colId": "3cd21f20-9a35-49dc-bf07-398dbe76a890",
+            "containerId": "",
+            "name": "Get Cart Items",
+            "url": "http://127.0.0.1:8000/api/cart/menu-items",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2023-01-09T22:19:14.380Z",
+            "modified": "2023-01-12T00:22:38.356Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "f4675270e915d247632a273ac2047df7461cd78e",
+                "bearerPrefix": "Token"
+            },
+            "tests": []
+        },
+        {
+            "_id": "d7a7356a-7356-4561-af9c-0433e8689a9f",
+            "colId": "3cd21f20-9a35-49dc-bf07-398dbe76a890",
+            "containerId": "",
+            "name": "Add Menu Item to Cart",
+            "url": "http://127.0.0.1:8000/api/cart/menu-items",
+            "method": "POST",
+            "sortNum": 80000,
+            "created": "2023-01-09T23:13:51.084Z",
+            "modified": "2023-01-11T22:22:24.978Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"menuitem_id\": 2,\n  \"quantity\": 5\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "2dca32a9ec627e68e23cd2b0901c1cfaa6fe86d6",
+                "bearerPrefix": "Token"
+            },
+            "tests": []
+        },
+        {
+            "_id": "c35d3753-4cff-45f8-a5f1-e9e9d76cca5b",
+            "colId": "3cd21f20-9a35-49dc-bf07-398dbe76a890",
+            "containerId": "",
+            "name": "Delete User Cart",
+            "url": "http://127.0.0.1:8000/api/cart/menu-items",
+            "method": "DELETE",
+            "sortNum": 80000,
+            "created": "2023-01-09T23:19:21.878Z",
+            "modified": "2023-01-11T23:00:39.503Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "f4675270e915d247632a273ac2047df7461cd78e",
+                "bearerPrefix": "Token"
+            },
+            "tests": []
+        },
+        {
+            "_id": "e110ca2f-7afb-4763-b5af-5e3cde760b05",
+            "colId": "3cd21f20-9a35-49dc-bf07-398dbe76a890",
+            "containerId": "",
+            "name": "Get Order Items",
+            "url": "http://127.0.0.1:8000/api/orders",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2023-01-10T23:24:38.896Z",
+            "modified": "2023-01-12T00:22:52.853Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "f4675270e915d247632a273ac2047df7461cd78e",
+                "bearerPrefix": "Token"
+            },
+            "tests": []
+        },
+        {
+            "_id": "93844d77-1e66-4f29-9790-d26adeca41dc",
+            "colId": "3cd21f20-9a35-49dc-bf07-398dbe76a890",
+            "containerId": "",
+            "name": "Create Order",
+            "url": "http://127.0.0.1:8000/api/orders",
+            "method": "POST",
+            "sortNum": 80000,
+            "created": "2023-01-11T21:15:38.555Z",
+            "modified": "2023-01-12T00:22:50.503Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "f4675270e915d247632a273ac2047df7461cd78e",
+                "bearerPrefix": "Token"
+            },
+            "tests": []
+        },
+        {
+            "_id": "a68c6f45-f120-4813-8436-e0cfbf55b657",
+            "colId": "3cd21f20-9a35-49dc-bf07-398dbe76a890",
+            "containerId": "",
+            "name": "Get Single Order",
+            "url": "http://127.0.0.1:8000/api/orders/8",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2023-01-11T23:00:44.349Z",
+            "modified": "2023-01-11T23:52:51.499Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "f4675270e915d247632a273ac2047df7461cd78e",
+                "bearerPrefix": "Token"
+            },
+            "tests": []
+        },
+        {
+            "_id": "a8b68fae-c8b3-4f53-88a1-c293fc48164e",
+            "colId": "3cd21f20-9a35-49dc-bf07-398dbe76a890",
+            "containerId": "",
+            "name": "Put Single Order",
+            "url": "http://127.0.0.1:8000/api/orders/9",
+            "method": "PUT",
+            "sortNum": 100000,
+            "created": "2023-01-11T23:03:00.318Z",
+            "modified": "2023-01-11T23:09:37.166Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\": 9,\n  \"user\": 5,\n  \"delivery_crew\": 4,\n  \"status\": false,\n  \"total\": 5.00,\n  \"date\": \"2023-01-11\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "f4675270e915d247632a273ac2047df7461cd78e",
+                "bearerPrefix": "Token"
+            },
+            "tests": []
+        },
+        {
+            "_id": "98dfa5d4-4eaa-4204-b4fd-abbe1cd30371",
+            "colId": "3cd21f20-9a35-49dc-bf07-398dbe76a890",
+            "containerId": "",
+            "name": "Patch Single Order",
+            "url": "http://127.0.0.1:8000/api/orders/8",
+            "method": "PATCH",
+            "sortNum": 110000,
+            "created": "2023-01-11T23:09:59.293Z",
+            "modified": "2023-01-12T00:22:44.822Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"status\": false\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "f4675270e915d247632a273ac2047df7461cd78e",
+                "bearerPrefix": "Token"
+            },
+            "tests": []
+        },
+        {
+            "_id": "770d7da4-64f8-43e1-892c-13aa16990e0a",
+            "colId": "3cd21f20-9a35-49dc-bf07-398dbe76a890",
+            "containerId": "",
+            "name": "Delete Single Order",
+            "url": "http://127.0.0.1:8000/api/orders/9",
+            "method": "DELETE",
+            "sortNum": 120000,
+            "created": "2023-01-11T23:50:23.283Z",
+            "modified": "2023-01-11T23:50:55.252Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "f4675270e915d247632a273ac2047df7461cd78e",
+                "bearerPrefix": "Token"
+            },
+            "tests": []
+        }
+    ]
+}
